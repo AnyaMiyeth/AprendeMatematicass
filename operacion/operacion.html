@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematicas para Niños</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Aprende y Diviertete con las Matemáticas</h1>
+    </header>
+    <nav>
+        <ul>
+            <a href="index.html">
+                <li>Inicio</li>
+            </a>
+            <a href="./apreden/aprende.html">
+                <li> Aprende</li>
+            </a>
+            <a href="">
+                <li>Operaciones</li>
+            </a>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <form>
+                <select name="" id="operacionSelccionada">
+                    <option>suma</option>
+                    <option>Resta</option>
+                </select>
+                <label>Numero 1</label>
+                <input id="numero1" type="number" />
+                <label>Numero 2</label>
+                <input id="numero2" type="number" />
+                <label>resultado</label>
+                <input id="resultado" type="number" />
+                <button type="button" onclick="operacion()">Calcular</button>
+            </form>
+
+        </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+    <script>
+        function operacion() {
+            var op = document.getElementById("operacionSelccionada").value = resultado
+            var numero1 = document.getElementById("numero1").value;
+            var numero2 = document.getElementById("numero2").value;
+            var resultado;
+            if (op === "Suma") {
+                resultado = Suma(numero1, numero2);
+            }
+            document.getElementById("resultado").value = resultado;
+        }
+
+        function Suma(numero1, numero2) {
+            var numero1 = document.getElementById("numero1").value;
+            var numero2 = document.getElementById("numero2").value;
+            var resultado = parseInt(numero1) + parseInt(numero2);
+            return resultado;
+        }
+
+    </script>
+</body>
+
+</html>
