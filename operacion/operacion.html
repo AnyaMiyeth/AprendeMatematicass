@@ -30,7 +30,7 @@
         <article>
             <form>
                 <select name="" id="operacionSelccionada">
-                    <option>suma</option>
+                    <option>Suma</option>
                     <option>Resta</option>
                 </select>
                 <label>Numero 1</label>
@@ -49,10 +49,10 @@
     </footer>
     <script>
         function operacion() {
-            var op = document.getElementById("operacionSelccionada").value = resultado
-            var numero1 = document.getElementById("numero1").value;
+            var op = document.getElementById("operacionSelccionada").value;          var numero1 = document.getElementById("numero1").value;
             var numero2 = document.getElementById("numero2").value;
             var resultado;
+            
             if (op === "Suma") {
                 resultado = Suma(numero1, numero2);
             }
@@ -60,9 +60,9 @@
         }
 
         function Suma(numero1, numero2) {
-            var numero1 = document.getElementById("numero1").value;
-            var numero2 = document.getElementById("numero2").value;
+         
             var resultado = parseInt(numero1) + parseInt(numero2);
+            alert(resultado)
             return resultado;
         }
 
