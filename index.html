@@ -13,7 +13,7 @@
     <header>
         <h1>Aprende y Diviertete con las Matemáticas</h1>
     </header>
-    <nav>
+    <nav class="sidenav">
         <ul>
             <a href="index.html">
                 <li>Inicio</li>
@@ -27,7 +27,7 @@
         </ul>
     </nav>
     <section>
-        <article>
+        <article class="content">
 
             <div id="imagenprincipal"></div>
             <img src="./imge/42244.jpg" alt="niño aprendiendo a sumar" width="20%">
@@ -45,11 +45,27 @@
                     Natus
                     cum possimus quaerat!</p>
             </div>
+            <div id="demo">
+                <p>Let AJAX change this text.</p>
+                <button type="button" onclick="loadDoc()">Change Content</button>
+            </div>
         </article>
+        
     </section>
-    <footer>
+    <footer class="footer">
         <p>Footer</p>
     </footer>
+
+    <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "./apreden/aprende.html");
+            xhttp.send();
+        }
+    </script>
 </body>
 
 </html>

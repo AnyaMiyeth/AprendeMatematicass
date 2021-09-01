@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     $("#btnOperacion").click(function () {
-        op = $("#operacionSelccionada").val();
+        op = $("#cmbOperaciones").val();
         alert(op);
         switch (op) {
             case "suma":
@@ -22,5 +22,9 @@ $(document).ready(function () {
                 break;
         }
     })
+
+  $("#btnCambio").click(function(){
+    $("#div1").load("../index.html");
+  });
 
 });

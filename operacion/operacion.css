@@ -9,3 +9,8 @@ padding: 0.5em;
   .content{
       padding-left: 4em;
   }
+
+  .cuerpo{
+    padding: 40px;
+    padding-right: 500px;
+}
